@@ -1,0 +1,197 @@
+/* ===== PREMIUM THEME - GLOBAL VARIABLES & TYPOGRAPHY ===== */
+:root{
+  --bg:#fffaf8;
+  --surface:#ffffff;
+  --muted:#f6eef0;
+  --text:#2b2b2b;
+  --muted-text:#6a6a6a;
+  --accent:#c95b6a;    /* deep rose */
+  --accent-2:#d6b77a;  /* warm gold */
+  --glass: rgba(255,255,255,0.6);
+  --card-bg: rgba(255,255,255,0.8);
+  --shadow-lg: 0 24px 50px rgba(16,18,24,0.12);
+  --shadow-md: 0 12px 30px rgba(16,18,24,0.08);
+  --radius-lg: 14px;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{
+  font-family:"Poppins",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(180deg,var(--bg) 0%, #fff 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
+
+/* nice max-width container used across pages */
+.container{
+  max-width:1200px;
+  margin:0 auto;
+  padding:0 20px
+}
+
+/* Headings use Playfair Display for that elegant serif */
+h1,h2,h3,h4{font-family:"Playfair Display",serif;color:var(--text);letter-spacing:0.2px}
+h1{font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.02}
+h2{font-size:clamp(1.4rem,2.8vw,2rem);margin-bottom:1rem}
+
+/* Header / Navbar */
+header, .navbar{position:sticky;top:0;z-index:1200;background:transparent}
+.navbar{backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);}
+.navbar-inner{display:flex;align-items:center;justify-content:center;padding:14px 20px;position:relative}
+.nav-left{position:absolute;left:20px;display:flex;align-items:center;gap:12px}
+.nav-right{position:absolute;right:20px;display:flex;align-items:center;gap:12px}
+.logo{font-family:"Playfair Display",serif;font-weight:700;font-size:1.05rem;color:var(--text);text-decoration:none;display:inline-block}
+
+.user-name{font-weight:700;color:var(--muted-text);margin-right:6px}
+.user-name{display:flex;align-items:center;gap:8px;font-weight:700;color:var(--text);margin-right:6px}
+.nav-avatar{width:36px;height:36px;border-radius:50%;display:inline-grid;place-items:center;font-weight:700;color:#fff;background:linear-gradient(135deg,var(--accent),var(--accent-2));box-shadow:0 6px 18px rgba(201,91,106,0.18);flex-shrink:0;font-size:0.95rem}
+.nav-username{display:inline-block;font-weight:600;color:var(--muted-text);margin-left:6px;max-width:120px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:0.95rem}
+@media (max-width:600px){.nav-username{display:none}.nav-avatar{width:32px;height:32px;font-size:0.85rem}}
+.logout-btn{background:transparent;border:1px solid rgba(16,18,24,0.06);padding:8px 12px;border-radius:10px;color:var(--text);cursor:pointer;transition:transform .18s,box-shadow .18s}
+/* Account dropdown */
+.account{position:relative;display:flex;align-items:center;gap:8px}
+.account-toggle{display:flex;align-items:center;gap:8px;background:transparent;border:none;cursor:pointer;padding:6px;border-radius:10px}
+.account-dropdown{position:absolute;right:0;top:calc(100% + 8px);min-width:160px;background:var(--surface);border-radius:12px;box-shadow:0 20px 50px rgba(16,18,24,0.12);padding:10px;display:none;flex-direction:column;gap:8px;border:1px solid rgba(10,12,18,0.04);z-index:1400}
+.account-dropdown.show{display:flex}
+.account-dropdown .logout-btn{width:100%;text-align:left;padding:10px;border-radius:10px;background:linear-gradient(180deg,#fff,#fff);border:1px solid rgba(16,18,24,0.04)}
+.logout-btn:hover{transform:translateY(-3px);box-shadow:0 10px 28px rgba(16,18,24,0.06)}
+.login-btn{display:inline-flex}
+
+.nav-menu{display:flex;gap:18px;align-items:center;list-style:none}
+.nav-menu a{color:var(--muted-text);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600;position:relative;overflow:visible}
+.nav-menu a::after{content:"";position:absolute;left:10px;right:10px;bottom:2px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform:scaleX(0);transform-origin:left center;transition:transform .28s cubic-bezier(.2,.9,.2,1);border-radius:2px;opacity:0}
+.nav-menu a:hover{color:var(--text);transform:translateY(-3px)}
+.nav-menu a:hover::after{transform:scaleX(1);opacity:1}
+
+.login-btn{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white;padding:8px 16px;border-radius:10px;border:none;cursor:pointer;font-weight:700;box-shadow:0 8px 28px rgba(201,91,106,0.18);transition:transform .2s ease,box-shadow .2s ease}
+.login-btn:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(201,91,106,0.16)}
+
+.hamburger{display:none;flex-direction:column;gap:4px;cursor:pointer}
+.hamburger span{width:22px;height:2px;background:var(--text);border-radius:2px}
+
+/* ===== HERO / CAROUSEL (elegant) ===== */
+.carousel{position:relative;overflow:hidden;width:100%;min-height:520px;border-radius:var(--radius-lg);box-shadow:var(--shadow-lg);margin:28px 0}
+.carousel-item{position:absolute;inset:0;opacity:0;transition:opacity 900ms cubic-bezier(.2,.9,.2,1),transform 900ms ease;will-change:opacity,transform}
+.carousel-item img{width:100%;height:100%;object-fit:cover;display:block;filter:brightness(.86) contrast(1.03);transform-origin:center;transition:transform 1.6s ease}
+.carousel-item.active{opacity:1;z-index:2}
+.carousel-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(12,12,14,0.05) 0%,rgba(12,12,14,0.28) 100%);pointer-events:none}
+
+.carousel-inner{position:relative;z-index:3;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;height:100%;padding:60px 8%}
+.hero-title{color:#fff;font-family:"Playfair Display",serif;font-size:clamp(2rem,4vw,3.8rem);line-height:1.02;margin-bottom:12px;text-shadow:0 10px 30px rgba(6,6,6,0.45)}
+.hero-sub{color:rgba(255,255,255,0.92);font-size:1.05rem;max-width:680px;margin-bottom:18px}
+
+.hero-ctas{display:flex;gap:14px;align-items:center}
+.btn-primary{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:12px;border:none;color:#fff;background:linear-gradient(90deg,var(--accent),#e7a86e);font-weight:700;box-shadow:0 12px 32px rgba(217,146,127,0.18);cursor:pointer;transition:transform .22s ease,box-shadow .22s ease}
+.btn-primary:hover{transform:translateY(-4px);box-shadow:0 26px 60px rgba(217,146,127,0.18)}
+.btn-ghost{background:rgba(255,255,255,0.12);color:#fff;padding:12px 18px;border-radius:12px;border:1px solid rgba(255,255,255,0.12)}
+
+/* Carousel controls */
+.carousel-control{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.08);backdrop-filter:blur(6px);width:48px;height:48px;border-radius:50%;display:grid;place-items:center;border:none;color:#fff;cursor:pointer;transition:transform .18s ease,background .18s ease}
+.carousel-control:hover{transform:scale(1.06);background:rgba(255,255,255,0.12)}
+.carousel-control.prev{left:22px}
+.carousel-control.next{right:22px}
+
+.carousel-dots{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;display:flex;gap:10px;z-index:40}
+.carousel-dots button{width:12px;height:12px;border-radius:999px;border:none;background:rgba(255,255,255,0.35);box-shadow:inset 0 -2px 0 rgba(0,0,0,0.08);cursor:pointer;transition:transform .18s ease,background .18s ease}
+.carousel-dots button.active{background:var(--accent-2);transform:scale(1.35);box-shadow:0 6px 18px rgba(214,183,122,0.14)}
+
+/* subtle pan/zoom on active image */
+.carousel-item.active img{transform:scale(1.05)}
+
+/* ===== Cards: Blog / Team / Testimonial ===== */
+.card{background:linear-gradient(180deg,var(--card-bg),rgba(255,255,255,0.86));border-radius:12px;padding:18px;box-shadow:var(--shadow-md);border:1px solid rgba(255,255,255,0.6)}
+.blog-card{display:flex;flex-direction:column;gap:12px}
+.blog-card .thumb{border-radius:10px;overflow:hidden;box-shadow:0 16px 40px rgba(17,17,17,0.06)}
+.blog-card h3{font-size:1.05rem;color:var(--text)}
+.blog-card p{color:var(--muted-text);font-size:.95rem}
+
+/* Read more link with animated underline */
+.read-more{display:inline-block;color:var(--accent);font-weight:700;position:relative;text-decoration:none}
+.read-more::after{content:"";position:absolute;left:0;right:0;bottom:-2px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));transform:scaleX(0);transform-origin:left center;transition:transform .32s cubic-bezier(.2,.9,.2,1)}
+.read-more:hover::after{transform:scaleX(1)}
+
+/* Card hover tilt + image brighten */
+.card{transition:transform .42s cubic-bezier(.2,.9,.2,1),box-shadow .42s;will-change:transform}
+.card:hover{transform:translateY(-8px) rotateX(1deg);box-shadow:0 32px 70px rgba(16,18,24,0.12)}
+.thumb img, .card img{transition:transform .9s cubic-bezier(.2,.9,.2,1),filter .42s}
+.card:hover .thumb img, .card:hover img{transform:scale(1.04);filter:brightness(1.04)}
+
+.team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.team-card{text-align:center;padding:22px;background:linear-gradient(180deg,#fff 0%, rgba(255,255,255,0.9) 100%);border-radius:12px;box-shadow:0 14px 36px rgba(16,18,24,0.06)}
+.team-photo{width:84px;height:84px;border-radius:50%;display:inline-grid;place-items:center;font-size:36px;background:linear-gradient(135deg,rgba(217,146,127,0.12),rgba(214,183,122,0.08));margin-bottom:10px}
+
+.testimonial-carousel{display:grid;gap:18px}
+.testimonial-slide{padding:22px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.96),rgba(255,255,255,0.9));box-shadow:0 18px 42px rgba(10,12,18,0.06)}
+.testimonial-photo{width:68px;height:68px;border-radius:50%;display:inline-grid;place-items:center;background:var(--muted);margin-bottom:12px}
+.testimonial-text{font-style:italic;color:var(--muted-text)}
+
+/* subtle hover on testimonial */
+.testimonial-slide:hover{transform:translateY(-6px);box-shadow:0 36px 80px rgba(10,12,18,0.08);transition:transform .36s cubic-bezier(.2,.9,.2,1),box-shadow .36s}
+
+/* Reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:all 720ms cubic-bezier(.2,.9,.2,1)}
+.reveal.active{opacity:1;transform:none}
+
+/* CTA ripple kept but styled */
+.ripple{position:relative;overflow:hidden;--ripple-x:50%;--ripple-y:50%}
+.ripple::after{content:"";position:absolute;left:var(--ripple-x);top:var(--ripple-y);width:8px;height:8px;background:rgba(255,255,255,0.24);border-radius:50%;transform:translate(-50%,-50%) scale(0);opacity:0;transition:transform .5s cubic-bezier(.2,.9,.2,1),opacity .5s}
+.ripple:active::after{transform:translate(-50%,-50%) scale(60);opacity:.03;transition:none}
+
+/* subtle hover glow for primary button */
+.btn-primary:focus, .btn-primary:hover{box-shadow:0 30px 70px rgba(217,146,127,0.12)}
+
+/* small animated underline for headings when hovered (decorative) */
+h2.section-title{position:relative}
+h2.section-title::after{content:"";position:absolute;left:0;bottom:-10px;height:4px;width:60px;background:linear-gradient(90deg,var(--accent),var(--accent-2));border-radius:3px;transform:translateY(8px) scaleX(0);transform-origin:left;transition:transform .36s cubic-bezier(.2,.9,.2,1)}
+h2.section-title:hover::after{transform:translateY(0) scaleX(1)}
+
+/* small motion for nav logo */
+.logo{transition:transform .36s cubic-bezier(.2,.9,.2,1)}
+.logo:hover{transform:translateY(-3px) scale(1.01)}
+
+/* Buttons & utilities */
+.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 14px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+.btn-secondary{background:#fff;border:1px solid rgba(10,12,18,0.04);color:var(--text)}
+
+/* Scroll to Top */
+#toTop{position:fixed;right:28px;bottom:28px;width:46px;height:46px;border-radius:12px;border:none;background:linear-gradient(180deg,var(--accent),var(--accent-2));color:#fff;display:none;box-shadow:0 12px 32px rgba(201,91,106,0.14);cursor:pointer}
+#toTop:focus{outline:3px solid rgba(214,183,122,0.18);outline-offset:3px}
+
+/* Footer */
+footer{background:linear-gradient(180deg, #fff8f7, #fff4f2);padding:36px 20px;margin-top:36px;border-top:1px solid rgba(10,12,18,0.04)}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:10px}
+.footer .social-icons{display:flex;gap:12px}
+.social-icon{width:34px;height:34px;display:inline-grid;place-items:center;border-radius:8px;background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.7));box-shadow:0 8px 18px rgba(16,18,24,0.06)}
+.footer p{color:var(--muted-text)}
+
+/* Auth page */
+body.auth-page{background:linear-gradient(135deg,rgba(217,146,127,0.06),rgba(214,183,122,0.04));display:flex;align-items:center;justify-content:center;min-height:100vh;padding:40px}
+.auth-container{width:380px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,255,255,0.94));padding:34px;border-radius:16px;box-shadow:0 20px 50px rgba(16,18,24,0.08);text-align:center}
+.auth-container h2{color:var(--accent);margin-bottom:18px}
+.auth-container input{width:100%;padding:12px;border-radius:10px;border:1px solid rgba(16,18,24,0.06);margin-bottom:14px}
+.auth-container button{width:100%;padding:12px;border-radius:10px;border:none;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;font-weight:700}
+
+/* Accessibility focus */
+a:focus,button:focus,input:focus,textarea:focus{outline:4px solid rgba(214,183,122,0.14);outline-offset:3px;border-radius:8px}
+
+/* Responsive adjustments */
+@media (max-width:900px){
+  .nav-menu{display:none}
+  .hamburger{display:flex}
+  .carousel-inner{padding:36px 6%}
+  .hero-title{font-size:clamp(1.6rem,6vw,2.6rem)}
+}
+@media (max-width:480px){
+  .carousel{min-height:420px}
+  .carousel-control{width:40px;height:40px}
+  .carousel-dots button{width:10px;height:10px}
+}
+
+/* Small utility classes */
+.muted{color:var(--muted-text)}
+.center{text-align:center}
+.mb-16{margin-bottom:16px}
+

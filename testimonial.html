@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonial | Wedding Organizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner container">
+      <div class="nav-left">
+        <a href="home.html" class="logo">Elegant Wedding</a>
+      </div>
+      <div class="nav-center">
+        <ul class="nav-menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="testimonial.html">Testimonial</a></li>
+          <li><a href="team.html">Anggota</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="account">
+          <button id="navUserBtn" class="account-toggle" aria-haspopup="true" aria-expanded="false">
+            <span id="navUser">Guest</span>
+          </button>
+          <div class="account-dropdown" id="accountDropdown" role="menu" aria-hidden="true">
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+          </div>
+        </div>
+        <button class="login-btn" id="loginBtn" onclick="openModal()">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="testimonial-section" style="margin:36px 0">
+      <h2 class="section-title reveal" data-aos="fade-up">Testimoni Klien</h2>
+      <div class="testimonial-carousel" data-aos="fade-up" data-aos-delay="200" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-top:18px">
+        <div class="testimonial-slide card reveal active">
+          <div class="testimonial-photo"><img src="assets/img/contoh_img10.jpg" alt="Rina & Doni" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+          <p class="testimonial-text">"Makasih banyak, Elegant Wedding! 😍 Pernikahan kami sukses banget sampe tamu-tamu nyangka ini bukan nikah, tapi konser bintang lima 🎤✨ Dekorasinya uwu banget, koordinasinya rapi parah — bahkan kucing lewat aja ikut baris rapi! 🐱💃"</p><br>
+          <p class="testimonial-name muted">- Sahroni & Uya Kuya</p>
+        </div>
+
+        <div class="testimonial-slide card reveal">
+          <div class="testimonial-photo"><img src="assets/img/contoh_img3.jpg" alt="Sarah & Michael" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+          <p class="testimonial-text">"Profesional banget sampe semut aja salut 🐜💼! Detailnya luar biasa, tiap bunga diatur kayak lagi audisi Miss Universe 🌸👑. Timnya gokil, bener-bener tukang sulap yang nyulap mimpi jadi nyata 🎩✨"</p><br>
+          <p class="testimonial-name muted">- Slamet Kopling & Sigit Rendang</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <button id="toTop">↑</button>
+  <script src="script.js"></script>
+
+  <footer>
+    <div class="social-icons">
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2025 Penyelenggara Pernikahan Elegan. Seluruh hak cipta dilindungi. HMD</p>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Dirancang dengan penuh kasih ❤️ untuk hari istimewa Anda.</p>
+  </footer>
+</body>
+</html>

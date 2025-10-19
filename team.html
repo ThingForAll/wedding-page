@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anggota | Wedding Organizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner container">
+      <div class="nav-left">
+        <a href="home.html" class="logo">Elegant Wedding</a>
+      </div>
+      <div class="nav-center">
+        <ul class="nav-menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="testimonial.html">Testimonial</a></li>
+          <li><a href="team.html">Anggota</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="account">
+          <button id="navUserBtn" class="account-toggle" aria-haspopup="true" aria-expanded="false">
+            <span id="navUser">Guest</span>
+          </button>
+          <div class="account-dropdown" id="accountDropdown" role="menu" aria-hidden="true">
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+          </div>
+        </div>
+        <button class="login-btn" id="loginBtn" onclick="openModal()">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <section class="team-section container">
+    <h2 class="section-title reveal" data-aos="fade-up">Tim Profesional Kami</h2>
+    <div class="team-grid">
+      <div class="team-card reveal" data-aos="zoom-in" data-aos-delay="100">
+        <div class="team-photo"><img src="assets/img/contoh_img4.jpg" alt="Hamid" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3>Hamid Albar</h3>
+        <p class="muted">102240047<br>Lead Coordinator</p>
+      </div>
+      <div class="team-card reveal" data-aos="zoom-in" data-aos-delay="200">
+        <div class="team-photo"><img src="assets/img/contoh_img5.jpg" alt="Anang" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3>Anang Setiawan</h3>
+        <p class="muted">102240041<br>Creative Director</p>
+      </div>
+      <div class="team-card reveal" data-aos="zoom-in" data-aos-delay="300">
+        <div class="team-photo"><img src="assets/img/contoh_img6.jpg" alt="Abidah" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3>Abidah Ardelia</h3>
+        <p class="muted">102240037<br>Head of Design</p>
+      </div>
+      <div class="team-card reveal" data-aos="zoom-in" data-aos-delay="400">
+        <div class="team-photo"><img src="assets/img/contoh_img7.jpg" alt="Choirus" loading="lazy" style="width:100%;height:100%;object-fit:cover;border-radius:50%"></div>
+        <h3>Muchammad Choirus Syafi</h3>
+        <p class="muted">102240056<br>Logistics Manager</p>
+      </div>
+    </div>
+  </section>
+
+  <button id="toTop">↑</button>
+  <script src="script.js"></script>
+  
+  <footer>
+    <div class="social-icons">
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2025 Penyelenggara Pernikahan Elegan. Seluruh hak cipta dilindungi. HMD</p>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Dirancang dengan penuh kasih ❤️ untuk hari istimewa Anda.</p>
+  </footer>
+</body>
+</html>

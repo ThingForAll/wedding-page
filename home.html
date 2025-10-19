@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | Wedding Organizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner container">
+      <div class="nav-left">
+        <a href="home.html" class="logo">Elegant Wedding</a>
+      </div>
+      <div class="nav-center">
+        <ul class="nav-menu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="testimonial.html">Testimonial</a></li>
+          <li><a href="team.html">Anggota</a></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="account">
+          <button id="navUserBtn" class="account-toggle" aria-haspopup="true" aria-expanded="false">
+            <span id="navUser">Guest</span>
+          </button>
+          <div class="account-dropdown" id="accountDropdown" role="menu" aria-hidden="true">
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+          </div>
+        </div>
+        <button class="login-btn" id="loginBtn" onclick="openModal()">Login</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel / Hero -->
+  <section class="carousel">
+    <div class="carousel-item active"><img src="assets/img/contoh_img1.jpg" alt="Slide 1" loading="lazy"></div>
+    <div class="carousel-item"><img src="assets/img/contoh_img2.jpg" alt="Slide 2" loading="lazy"></div>
+    <div class="carousel-item"><img src="assets/img/contoh_img3.jpg" alt="Slide 3" loading="lazy"></div>
+
+    <div class="carousel-overlay"></div>
+    <div class="carousel-inner container">
+      <div class="hero-copy reveal">
+        <h1 class="hero-title">Menjadi Saksi Cinta Anda — Dipersiapkan dengan Elegan</h1>
+        <p class="hero-sub">Kami menghadirkan perencanaan, dekorasi, dan koordinasi hari pernikahan yang tak terlupakan. Dari konsep hingga eksekusi — semuanya dipersonalisasi untuk Anda.</p>
+        <div class="hero-ctas">
+          <a href="contact.html" class="btn btn-primary ripple">Pesan Konsultasi</a>
+          <a href="about.html" class="btn btn-ghost">Tentang Kami</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Carousel controls -->
+    <button class="carousel-control prev" aria-label="Previous slide" tabindex="0">‹</button>
+    <button class="carousel-control next" aria-label="Next slide" tabindex="0">›</button>
+    <div class="carousel-dots" role="tablist" aria-label="Carousel Pagination"></div>
+  </section>
+
+  <button id="toTop">↑</button>
+  <script src="script.js"></script>
+  <!-- Footer -->
+  <footer>
+    <div class="social-icons">
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://youtu.be/xvFZjo5PgG0?si=bnnH3y0wfiJp2V-H" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+    </div>
+    <p>&copy; 2025 Penyelenggara Pernikahan Elegan. Seluruh hak cipta dilindungi. HMD</p>
+    <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">Dirancang dengan penuh kasih ❤️ untuk hari istimewa Anda.</p>
+  </footer>
+</body>
+</html>
