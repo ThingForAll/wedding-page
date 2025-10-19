@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Register</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+        .auth-logo {
+      margin-bottom: 1px;
+    }
+    .auth-logo img {
+      width: 50px;
+      height: 50px;
+      object-fit: contain;
+    }
+
+  </style>
+
+</head>
+<body class="auth-page">
+  <div class="auth-container">
+    <div class="auth-logo">
+      <img src="assets/icons/contoh_icon1.png" alt="Wedding Logo">
+    </div>
+    <h2 id="form-title">Login</h2>
+
+    <form id="loginForm">
+      <input type="text" id="loginUsername" placeholder="Username" required>
+      <input type="password" id="loginPassword" placeholder="Password" required>
+      <button type="submit" class="btn btn-primary">Login</button>
+      <p class="muted">Belum punya akun? <a href="#" id="showRegister">Daftar di sini</a></p>
+    </form>
+
+    <form id="registerForm" style="display:none;">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit" class="btn btn-primary">Register</button>
+      <p class="muted">Sudah punya akun? <a href="#" id="showLogin">Login di sini</a></p>
+    </form>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
